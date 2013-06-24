@@ -1,6 +1,12 @@
 window.select = () ->
-  $(this).addClass 'selected'
-  $('img:not(.selected)').hide()
+  if $(this).hasClass 'selected'
+    $(this).removeClass 'selected'
+    $(this).width(320).height(180)
+    $('img').show()
+  else
+    $(this).addClass 'selected'
+    $('img:not(.selected)').hide()
+    $(this).width(1280).height(720)
 
 gallery = (data) ->
   html = JST['app/templates/gallery.us'](text: data)
