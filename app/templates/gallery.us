@@ -1,5 +1,5 @@
 <div>
   <% _.each(text, function(s) { %>
-    <img src="images/<%= s %>?width=320" width="320" height="180" />
+    <img src="images/<%= s %>?width=320" id="<%= s %>" width="320" height="180" />
   <% }) %>
 </div>
